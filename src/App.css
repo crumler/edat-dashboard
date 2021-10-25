@@ -32,7 +32,8 @@ header h3 {
 }
 
 .currentHerokuStatus,
-.currentGithubStatus {
+.currentGithubStatus,
+.currentContentfulStatus {
   display: flex;
   margin: 1rem 2rem;
   max-width: 25rem;
