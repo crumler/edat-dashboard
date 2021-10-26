@@ -9,7 +9,7 @@ const Header = () => {
     <header>
       <h1>EDAT Operations Status Page Dashboard</h1>
       <p>Last Updated: {today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + ' | ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()}</p>
-      <h3><CheckCircleIcon color="success" fontSize="medium" /> = Fully Operational | <CheckCircleIcon color="primary" fontSize="medium" /> = Maintenance | <WarningIcon color="error" fontSize="medium" /> = Outage</h3>
+      <h3><CheckCircleIcon color="success" fontSize="medium" /> = Fully Operational | <CheckCircleIcon color="primary" fontSize="medium" /> = Maintenance | <CheckCircleIcon color="secondary" /> = Limited Impact (Salesforce Only) | <WarningIcon color="error" fontSize="medium" /> = Outage</h3>
     </header>
   )
 }

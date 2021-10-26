@@ -33,10 +33,15 @@ header h3 {
 
 .currentHerokuStatus,
 .currentGithubStatus,
-.currentContentfulStatus {
+.currentContentfulStatus,
+.currentSalesforceStatus {
   display: flex;
   margin: 1rem 2rem;
   max-width: 25rem;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.currentSalesforceStatus div a {
+  display: inline-block;
 }
