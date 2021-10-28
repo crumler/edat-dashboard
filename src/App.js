@@ -6,6 +6,7 @@ import HerokuStatus from './components/HerokuStatus';
 import GithubStatus from './components/GithubStatus';
 import ContentfulStatus from './components/ContentfulStatus';
 import SalesforceStatus from './components/SalesforceStatus';
+import ArtifactoryStatus from './components/ArtifactoryStatus';
 
 function App() {
   const herokuURL = "https://status.heroku.com/api/v4/current-status";
@@ -15,6 +16,8 @@ function App() {
   const salesforceGSO3URL = "https://api.status.salesforce.com/v1/instances/NA132/status/";
   const salesforceGSO4URL = "https://api.status.salesforce.com/v1/instances/NA110/status/";
   const salesforceGCCURL = "https://api.status.salesforce.com/v1/instances/NA161/status/";
+  const artifactoryURL = "https://status.jfrog.io/";
+  const slackURL = "https://status.slack.com/api/v2.0.0/current";
 
   //Heroku Status Categories
   const [herokuAppsStatus, setHerokuAppsStatus] = useState("");
@@ -50,6 +53,9 @@ function App() {
   const [salesforceGSO3, setSalesforceGSO3] = useState("");
   const [salesforceGSO4, setSalesforceGSO4] = useState("");
   const [salesforceGCC, setSalesforceGCC] = useState("");
+
+  //Artifactory Status (US-East1)
+  const [artifactoryEast1, setArtifactoryEast1] = useState("");
 
   //Heroku Fetch Request
   useEffect(() => {
@@ -128,6 +134,31 @@ function App() {
       setContentfulCompose(response.data.components[10].status);
     });
   });
+
+  //Artifactory Fetch Request
+  useEffect(() => {
+    Axios.get(artifactoryURL, {
+      headers: {
+        Accept: 'application/json'
+      }
+    }).then((response) => {
+      // console.log(response.data);
+      setArtifactoryEast1(response.data.components[0].status);
+    });
+  });
+
+  //Slack Status Fetch
+  useEffect(() => {
+    Axios.get(slackURL, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => {
+      console.log(response.data);
+    });
+  });
   
   return (
     <div>
@@ -167,6 +198,7 @@ function App() {
           salesforceGSO4={salesforceGSO4}
           salesforceGCC={salesforceGCC}
         />
+        <ArtifactoryStatus artifactoryEast1={artifactoryEast1} />
       </div>
     </div> 
   );
