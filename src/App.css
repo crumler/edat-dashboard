@@ -34,14 +34,11 @@ header h3 {
 .currentHerokuStatus,
 .currentGithubStatus,
 .currentContentfulStatus,
-.currentSalesforceStatus {
+.currentSalesforceStatus,
+.currentArtifactoryStatus {
   display: flex;
   margin: 1rem 2rem;
   max-width: 25rem;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.currentSalesforceStatus div a {
-  display: inline-block;
 }
