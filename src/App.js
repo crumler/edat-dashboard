@@ -8,48 +8,48 @@ import ContentfulStatus from './components/ContentfulStatus';
 import SalesforceStatus from './components/SalesforceStatus';
 
 function App() {
-  const herokuURL = "https://status.heroku.com/api/v4/current-status";
-  const githubURL = "https://www.githubstatus.com/api/v2/summary.json";
-  const contentfulURL = "https://www.contentfulstatus.com/";
-  const salesforceGSO1URL = "https://api.status.salesforce.com/v1/instances/EU35/status/";
-  const salesforceGSO3URL = "https://api.status.salesforce.com/v1/instances/NA132/status/";
-  const salesforceGSO4URL = "https://api.status.salesforce.com/v1/instances/NA110/status/";
-  const salesforceGCCURL = "https://api.status.salesforce.com/v1/instances/NA161/status/";
+  const herokuURL = 'https://status.heroku.com/api/v4/current-status';
+  const githubURL = 'https://www.githubstatus.com/api/v2/summary.json';
+  const contentfulURL = 'https://www.contentfulstatus.com/';
+  const salesforceGSO1URL = 'https://api.status.salesforce.com/v1/instances/EU35/status/';
+  const salesforceGSO3URL = 'https://api.status.salesforce.com/v1/instances/NA132/status/';
+  const salesforceGSO4URL = 'https://api.status.salesforce.com/v1/instances/NA110/status/';
+  const salesforceGCCURL = 'https://api.status.salesforce.com/v1/instances/NA161/status/';
 
   //Heroku Status Categories
-  const [herokuAppsStatus, setHerokuAppsStatus] = useState("");
-  const [herokuDataStatus, setHerokuDataStatus] = useState("");
-  const [herokuToolsStatus, setHerokuToolsStatus] = useState("");
+  const [herokuAppsStatus, setHerokuAppsStatus] = useState('');
+  const [herokuDataStatus, setHerokuDataStatus] = useState('');
+  const [herokuToolsStatus, setHerokuToolsStatus] = useState('');
 
   //GitHub Status Categories
-  const [githubGitOperations, setGithubGitOperations] = useState("");
-  const [githubApiRequests, setGithubApiRequests] = useState("");
-  const [githubWebhooks, setGithubWebhooks] = useState("");
-  const [githubIssues, setGithubIssues] = useState("");
-  const [githubPullRequests, setGithubPullRequests] = useState("");
-  const [githubActions, setGithubActions] = useState("");
-  const [githubPackages, setGithubPackages] = useState("");
-  const [githubPages, setGithubPages] = useState("");
-  const [githubCodespaces, setGithubCodespaces] = useState("");
+  const [githubGitOperations, setGithubGitOperations] = useState('');
+  const [githubApiRequests, setGithubApiRequests] = useState('');
+  const [githubWebhooks, setGithubWebhooks] = useState('');
+  const [githubIssues, setGithubIssues] = useState('');
+  const [githubPullRequests, setGithubPullRequests] = useState('');
+  const [githubActions, setGithubActions] = useState('');
+  const [githubPackages, setGithubPackages] = useState('');
+  const [githubPages, setGithubPages] = useState('');
+  const [githubCodespaces, setGithubCodespaces] = useState('');
 
   //Contentful Status Categories
-  const [contentfulContentManagementApi, setContentfulContentManagementApi] = useState("");
-  const [contentfulContentDeliveryApi, setContentfulContentDeliveryApi] = useState("");
-  const [contentfulGraphQLContentApi, setContentfulGraphQLContentApi] = useState("");
-  const [contentfulWebApp, setContentfulWebApp] = useState("");
-  const [contentfulWebsite, setContentfulWebsite] = useState("");
-  const [contentfulAssetsCDN, setContentfulAssetsCDN] = useState("");
-  const [contentfulAuthenticationService, setContentfulAuthenticationService] = useState("");
-  const [contentfulWebhooks, setContentfulWebhooks] = useState("");
-  const [contentfulScheduledPublishing, setContentfulScheduledPublishing] = useState("");
-  const [contentfulLaunch, setContentfulLaunch] = useState("");
-  const [contentfulCompose, setContentfulCompose] = useState("");
+  const [contentfulContentManagementApi, setContentfulContentManagementApi] = useState('');
+  const [contentfulContentDeliveryApi, setContentfulContentDeliveryApi] = useState('');
+  const [contentfulGraphQLContentApi, setContentfulGraphQLContentApi] = useState('');
+  const [contentfulWebApp, setContentfulWebApp] = useState('');
+  const [contentfulWebsite, setContentfulWebsite] = useState('');
+  const [contentfulAssetsCDN, setContentfulAssetsCDN] = useState('');
+  const [contentfulAuthenticationService, setContentfulAuthenticationService] = useState('');
+  const [contentfulWebhooks, setContentfulWebhooks] = useState('');
+  const [contentfulScheduledPublishing, setContentfulScheduledPublishing] = useState('');
+  const [contentfulLaunch, setContentfulLaunch] = useState('');
+  const [contentfulCompose, setContentfulCompose] = useState('');
 
   //Salesforce Status Instances
-  const [salesforceGSO1, setSalesforceGSO1] = useState("");
-  const [salesforceGSO3, setSalesforceGSO3] = useState("");
-  const [salesforceGSO4, setSalesforceGSO4] = useState("");
-  const [salesforceGCC, setSalesforceGCC] = useState("");
+  const [salesforceGSO1, setSalesforceGSO1] = useState('');
+  const [salesforceGSO3, setSalesforceGSO3] = useState('');
+  const [salesforceGSO4, setSalesforceGSO4] = useState('');
+  const [salesforceGCC, setSalesforceGCC] = useState('');
 
   //Heroku Fetch Request
   useEffect(() => {
@@ -132,7 +132,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="flexContainer">
+      <div className='flexContainer'>
         <HerokuStatus
           appsStatus={herokuAppsStatus}
           dataStatus={herokuDataStatus}
