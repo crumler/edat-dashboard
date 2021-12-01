@@ -17,15 +17,15 @@ function App() {
   const salesforceGSO4URL = 'https://api.status.salesforce.com/v1/instances/NA110/status/';
   const salesforceGCCURL = 'https://api.status.salesforce.com/v1/instances/NA161/status/';
   const artifactoryURL = 'https://status.jfrog.io/';
+  const slackURL = 'https://status.slack.com/api/v2.0.0/current';
 
 
-
-  //Heroku Status Categories
+  // Heroku Status Categories
   const [herokuAppsStatus, setHerokuAppsStatus] = useState('');
   const [herokuDataStatus, setHerokuDataStatus] = useState('');
   const [herokuToolsStatus, setHerokuToolsStatus] = useState('');
 
-  //GitHub Status Categories
+  // GitHub Status Categories
   const [githubGitOperations, setGithubGitOperations] = useState('');
   const [githubApiRequests, setGithubApiRequests] = useState('');
   const [githubWebhooks, setGithubWebhooks] = useState('');
@@ -36,7 +36,7 @@ function App() {
   const [githubPages, setGithubPages] = useState('');
   const [githubCodespaces, setGithubCodespaces] = useState('');
 
-  //Contentful Status Categories
+  // Contentful Status Categories
   const [contentfulContentManagementApi, setContentfulContentManagementApi] = useState('');
   const [contentfulContentDeliveryApi, setContentfulContentDeliveryApi] = useState('');
   const [contentfulGraphQLContentApi, setContentfulGraphQLContentApi] = useState('');
@@ -49,16 +49,16 @@ function App() {
   const [contentfulLaunch, setContentfulLaunch] = useState('');
   const [contentfulCompose, setContentfulCompose] = useState('');
 
-  //Salesforce Status Instances
+  // Salesforce Status Instances
   const [salesforceGSO1, setSalesforceGSO1] = useState('');
   const [salesforceGSO3, setSalesforceGSO3] = useState('');
   const [salesforceGSO4, setSalesforceGSO4] = useState('');
   const [salesforceGCC, setSalesforceGCC] = useState('');
 
-  //Artifactory Status (US-East1)
+  // Artifactory Status (US-East1)
   const [artifactoryEast1, setArtifactoryEast1] = useState('');
 
-  //Multiple Axios Requests
+  // Multiple Axios Requests
   const herokuRequest = axios.get(herokuURL);
   const githubRequest = axios.get(githubURL);
   const contentfulRequest = axios.get(contentfulURL, { headers: { Accept: 'application/json' } });
@@ -67,6 +67,7 @@ function App() {
   const salesforceGSO4Request = axios.get(salesforceGSO4URL);
   const salesforceGCCRequest = axios.get(salesforceGCCURL);
   const artifactoryRequest = axios.get(artifactoryURL, { headers: { Accept: 'application/json' } });
+  const slackRequest = axios.get(slackURL);
   
   axios.all([herokuRequest, githubRequest, contentfulRequest, salesforceGSO1Request, salesforceGSO3Request, salesforceGSO4Request, salesforceGCCRequest, artifactoryRequest])
     .then(axios.spread((...response) => {
@@ -108,7 +109,10 @@ function App() {
 
       // Setting Artifactory Status
       setArtifactoryEast1(response[7].data.components[0].status);
-    }))
+
+      // Setting Slack Status
+      // console.log(response[8]);
+    }));
 
   
   return (
