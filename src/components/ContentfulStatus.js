@@ -4,19 +4,26 @@ import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 const ContentfulStatus = (props) => {
   return (
-    <div className='currentContentfulStatus'>
-      <a href='https://www.contentfulstatus.com/' target='_blank' rel='noreferrer'><h3>Contentful:</h3></a>
-      <div className='status'>Content Management API: {props.contentfulContentManagementApi === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Content Delivery API: {props.contentfulContentDeliveryApi === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>GraphQL Content API: {props.contentfulGraphQLContentApi === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Web App: {props.contentfulWebApp === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Website: {props.contentfulWebsite === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Assets CDN: {props.contentfulAssetsCDN === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Authentication Service: {props.contentfulAuthenticationService === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Webhooks: {props.contentfulWebhooks === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Scheduled Publishing: {props.contentfulScheduledPublishing === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Launch: {props.contentfulLaunch === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
-      <div className='status'>Compose: {props.contentfulCompose === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : <WarningIcon color='error' fontSize='large' />}</div>
+    <div className='contentful-status'>
+      <h3><a href='https://www.contentfulstatus.com/' target='_blank' rel='noreferrer'>Contentful:</a></h3>
+      {/* <div className='product-container'> */}
+        <div className='contentful-container'>
+          <div className='status'><span>Content Management: </span>{props.contentfulContentManagementApi === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Content Delivery: </span>{props.contentfulContentDeliveryApi === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>GraphQL Content: </span>{props.contentfulGraphQLContentApi === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Web App: </span>{props.contentfulWebApp === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Website: </span>{props.contentfulWebsite === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Assets CDN: </span>{props.contentfulAssetsCDN === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+        </div>
+
+        <div className='contentful-container'>
+          <div className='status'><span>Authentication Service: </span>{props.contentfulAuthenticationService === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Webhooks: </span>{props.contentfulWebhooks === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Scheduled Publishing: </span>{props.contentfulScheduledPublishing === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Launch: </span>{props.contentfulLaunch === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+          <div className='status'><span>Compose: </span>{props.contentfulCompose === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : <WarningIcon className='mui-icon' color='error' fontSize='large' />}</div>
+        </div>
+      {/* </div> */}
     </div>
   )
 };

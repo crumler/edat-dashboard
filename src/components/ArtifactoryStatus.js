@@ -5,9 +5,11 @@ import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 const ArtifactoryStatus = (props) => {
 
   return (
-    <div className='currentArtifactoryStatus'>
-      <a href='https://status.jfrog.io/' target='_blank' rel='noreferrer'><h3>Artifactory:</h3></a>
-      <div className='status'>US-East1: {props.artifactoryEast1 === 'operational' ? <CheckCircleIcon color='success' fontSize='large' /> : props.artifactoryEast1 === 'blue' ? <CheckCircleIcon color='primary' fontSize='large' /> : <a href='https://status.heroku.com/'><WarningIcon color='error' fontSize='large' /></a>} </div>
+    <div className='artifactory-status'>
+      <h3><a href='https://status.jfrog.io/' target='_blank' rel='noreferrer'>Artifactory:</a></h3>
+      <div className='product-container'>
+        <div className='status'><span>US-East1: </span>{props.artifactoryEast1 === 'operational' ? <CheckCircleIcon className='mui-icon' color='success' fontSize='large' /> : props.artifactoryEast1 === 'blue' ? <CheckCircleIcon className='mui-icon' color='primary' /> : <a href='https://status.heroku.com/'><WarningIcon className='mui-icon' color='error' fontSize='large' /></a>} </div>
+      </div>
     </div>
   )
 };
