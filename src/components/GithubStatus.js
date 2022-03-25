@@ -3,7 +3,6 @@ import WarningIcon from '@mui/icons-material/Warning';
 
 const GithubStatus = (props) => {
 
-  // Maintenance = 'under_maintenance'
   return (
     <div className='github-status'>
       <h3><a href='https://www.githubstatus.com' target='_blank' rel='noreferrer'>GitHub:</a></h3>
