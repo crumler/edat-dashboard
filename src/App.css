@@ -31,14 +31,9 @@ h3 {
   font-size: 2rem;
 }
 
-a:visited {
-  color: inherit;
-}
+a:visited { color: inherit; }
 
-span {
-  font-size: 1.8rem;
-  /* vertical-align: middle; */
-}
+span { font-size: 1.8rem; }
 
 .mui-icon { vertical-align: middle; }
 
@@ -69,9 +64,9 @@ span {
   display: flex;
   flex-wrap: nowrap;
   align-content: center;
-  /* width: 100%; */
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: fit-content;
 }
 
@@ -88,19 +83,11 @@ header h3 {
   align-items: center;
 }
 
-header h3:last-child {
-  margin-bottom: 0.7rem;
-}
+header h3:last-child { margin-bottom: 0.7rem; }
 
-header p {
-  font-size: 2.5rem;
-}
+header p { font-size: 2.5rem; }
 
-.status {
-  /* display: flex;
-  align-items: center; */
-  padding: .5rem;
-}
+.status { padding: .5rem; }
 
 .heroku-status,
 .github-status,
@@ -126,10 +113,6 @@ header p {
   align-items: center;
 }
 
-.contentful-container:first-child {
-  padding-right: 3rem;
-}
+.contentful-container:first-child { padding-right: 3rem; }
 
-.contentful-container:last-child {
-  margin-top: 2rem;
-}
+.contentful-container:last-child { margin-top: 2rem; }

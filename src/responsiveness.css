@@ -23,9 +23,7 @@
         grid-template-columns: 1fr;
     }
 
-    .contentful-container:last-child {
-        margin-top: 0;
-      }
+    .contentful-container:last-child { margin-top: 0; }
 }
 
 /* Tablet */
