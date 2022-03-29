@@ -1,6 +1,5 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import WarningIcon from '@mui/icons-material/Warning';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 const ArtifactoryStatus = (props) => {
 

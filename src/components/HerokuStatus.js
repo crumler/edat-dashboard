@@ -1,10 +1,8 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import WarningIcon from '@mui/icons-material/Warning';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 const HerokuStatus = (props) => {
 
-  
   return (
     <div className='heroku-status'>
       <h3><a href='https://status.heroku.com/' target='_blank' rel='noreferrer'>Heroku:</a></h3>
