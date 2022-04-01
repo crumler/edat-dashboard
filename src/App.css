@@ -14,7 +14,7 @@ body {
 }
 
 .logo-container {
-  width: 7rem;
+  width: 13%;
   height: auto;
   fill: #d52b1e;
   margin-top: 0.5rem;
@@ -27,7 +27,7 @@ h1 {
 
 h3 {
   text-align: center;
-  margin: 0.3rem;
+  margin: 0.3em;
   font-size: 2rem;
 }
 
@@ -57,7 +57,7 @@ span { font-size: 1.8rem; }
     "github-status github-status github-status"
     "contentful-status contentful-status contentful-status";
 
-  margin: 0 1rem;
+  margin: 0 1em;
 }
 
 .product-container {
@@ -83,11 +83,11 @@ header h3 {
   align-items: center;
 }
 
-header h3:last-child { margin-bottom: 0.7rem; }
+header h3:last-child { margin-bottom: 0.5em; }
 
 header p { font-size: 2.5rem; }
 
-.status { padding: .5rem; }
+.status { padding: .5em; }
 
 .heroku-status,
 .github-status,
@@ -95,7 +95,7 @@ header p { font-size: 2.5rem; }
 .salesforce-status,
 .artifactory-status {
   display: flex;
-  margin: 1rem 1rem;
+  margin: 0.7em;
   max-width: 100%;
   flex-direction: column;
   box-shadow: 5px 5px 15px -7px #000000;
@@ -113,6 +113,6 @@ header p { font-size: 2.5rem; }
   align-items: center;
 }
 
-.contentful-container:first-child { padding-right: 3rem; }
+.contentful-container:first-child { padding-right: 3em; }
 
-.contentful-container:last-child { margin-top: 2rem; }
+.contentful-container:last-child { margin-top: 0.5em; }
