@@ -146,11 +146,11 @@ function App() {
       <Header />
 
       <div className='grid-container'>
-      <HerokuStatus
-          appsStatus={herokuAppsStatus}
-          dataStatus={herokuDataStatus}
-          toolsStatus={herokuToolsStatus}
-        />
+        <HerokuStatus
+            appsStatus={herokuAppsStatus}
+            dataStatus={herokuDataStatus}
+            toolsStatus={herokuToolsStatus}
+          />
         <GithubStatus
           gitOperationsStatus={githubGitOperations}
           githubApiRequests={githubApiRequests}
